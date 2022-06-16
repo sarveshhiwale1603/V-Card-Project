@@ -11,7 +11,7 @@
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="dashboard-Admin.php" class="nav-link">Home</a>
+        <a href="index.php" class="nav-link">Home</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
         <a class="btn btn-smb btn-light"  href="system-Reports.php" class="nav-link"><i class="far fa-clock" style="font-size:20px;"></i></a>
