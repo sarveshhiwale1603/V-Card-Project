@@ -53,7 +53,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="Vcard.html" class="nav-link">
+            <a href="Vcard.php" class="nav-link">
               <i class="nav-icon fas fa-users"></i>
               <p>
               Vcard
@@ -61,7 +61,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="vendore-registrn.html" class="nav-link">
+            <a href="vendor-registrn.php" class="nav-link">
               <i class="nav-icon fas fa-star"></i>
               <p>
               Vendor Registration
@@ -69,7 +69,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="listing.html" class="nav-link">
+            <a href="listing.php" class="nav-link">
               <i class="nav-icon fas fa-clock"></i>
               <p>
               Listning
@@ -77,7 +77,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="categories.html" class="nav-link">
+            <a href="categories.php" class="nav-link">
               <i class="nav-icon fas fa-rupee-sign"></i>
               <p>
               Categories
@@ -85,7 +85,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="Membership.html" class="nav-link">
+            <a href="Membership.php" class="nav-link">
               <i class="nav-icon fa fa-edit"></i>
               <p>
               Membership
@@ -93,7 +93,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="contact.html" class="nav-link">
+            <a href="contact.php" class="nav-link">
               <i class="nav-icon fas fa-book"></i>
               <p>
               Contact
@@ -101,7 +101,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="logout.html" class="nav-link">
+            <a href="logout.php" class="nav-link">
               <i class="nav-icon fas fa-handshake"></i>
               <p>
               Logout
