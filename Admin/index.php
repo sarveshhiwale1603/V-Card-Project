@@ -57,7 +57,6 @@
         <!-- Small boxes (Stat box) -->
         
           <!-- ./col -->
-        </div>
         <!-- /.row -->
         <!-- Main row -->
         <!-- Info boxes -->
