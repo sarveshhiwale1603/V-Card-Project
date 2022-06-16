@@ -30,6 +30,8 @@
 <div class="wrapper">
 
          <?php include("pages\include\header.php"); ?>
+         <?php include("pages\include\sidebar.php"); ?>
+
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
