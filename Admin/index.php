@@ -119,7 +119,7 @@
                 <!-- /.info-box-content -->
               </div>
               <!-- /.info-box -->
-            </div>
+            </div>  
             <!-- /.col -->
           </div>
           <!-- /.row -->
@@ -129,7 +129,7 @@
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
-  <?php include("pages\include\footer.php"); ?>
+  <?php include("pages\include\Footer.php"); ?>
 
   <!-- Control Sidebar -->
   <aside class="control-sidebar control-sidebar-dark">
