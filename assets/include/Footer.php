@@ -50,14 +50,14 @@
                                 <li class="post-content-item">
                                     <div class="post-title-date">
                                         <span class="posted-on"><a href="#">22 August - 2021</a></span>
-                                        <h6 class="title"><a href="blog-details.html">Facilisis a ultricies quis
+                                        <h6 class="title"><a href="blog-details.php">Facilisis a ultricies quis
                                             dictumst fredom...</a></h6>
                                     </div>
                                 </li>
                                 <li class="post-content-item">
                                     <div class="post-title-date">
                                         <span class="posted-on"><a href="#">22 August - 2021</a></span>
-                                        <h6 class="title"><a href="blog-details.html">Facilisis a ultricies quis
+                                        <h6 class="title"><a href="blog-details.php">Facilisis a ultricies quis
                                             dictumst fredom...</a></h6>
                                     </div>
                                 </li>
@@ -68,7 +68,7 @@
                         <div class="widget categories-widget mb-40">
                             <h4 class="widget-title">Categories</h4>
                             <ul class="categories-link">
-                                <li><a href="how-work.html">How Work</a></li>
+                                <li><a href="how-work.php">How Work</a></li>
                                 <li><a href="#">Restaurant</a></li>
                                 <li><a href="#">Museum</a></li>
                                 <li><a href="#">Party Center</a></li>

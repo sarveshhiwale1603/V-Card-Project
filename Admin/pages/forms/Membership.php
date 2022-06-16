@@ -829,6 +829,10 @@
 
           <div class="col-4 grid-margin">
               <div class="card">
+                <div class="card-header">
+                  <h4 class="card-title"><b>Basic</b></h4>
+    
+                </div>
                   <div class="card-body">
                       <h4 class="card-title"></h4>
                       <form class="form-sample" method="post">
@@ -836,8 +840,19 @@
                               <div class="col-md-12">
                                   <div class="form-group row">
                                       <div class="col-sm-12">
-                                          <input type="hidden" class="form-control" name="id">
-                                          <input type="text" class="form-control" name="name">
+                                          <input type="hidden" class="form-control" name="id" >
+                                       
+                                          <input type="text" class="form-control" name="name" placeholder="General">
+                                      </div>
+                                  </div>
+                              </div>
+                              
+                          </div>
+                          <div class="row">
+                              <div class="col-md-12">
+                                  <div class="form-group row">
+                                      <div class="col-sm-12">
+                                          <input type="text" class="form-control" name="price" placeholder="25.00">
                                       </div>
                                   </div>
                               </div>
@@ -846,7 +861,8 @@
                               <div class="col-md-12">
                                   <div class="form-group row">
                                       <div class="col-sm-12">
-                                          <input type="text" class="form-control" name="price">
+                                          <input type="text" class="form-control" name="feat1" placeholder="Construction Drawing">
+                                          
                                       </div>
                                   </div>
                               </div>
@@ -855,7 +871,8 @@
                               <div class="col-md-12">
                                   <div class="form-group row">
                                       <div class="col-sm-12">
-                                          <input type="text" class="form-control" name="feat1">
+                                          <input type="text" class="form-control" name="feat2" placeholder="Floor & celling plan">
+                                          
                                       </div>
                                   </div>
                               </div>
@@ -864,7 +881,7 @@
                               <div class="col-md-12">
                                   <div class="form-group row">
                                       <div class="col-sm-12">
-                                          <input type="text" class="form-control" name="feat2">
+                                          <input type="text" class="form-control" name="feat3" placeholder="Selection of Material">
                                       </div>
                                   </div>
                               </div>
@@ -873,7 +890,7 @@
                               <div class="col-md-12">
                                   <div class="form-group row">
                                       <div class="col-sm-12">
-                                          <input type="text" class="form-control" name="feat3">
+                                          <input type="text" class="form-control" name="feat4" placeholder="Structure of a project">
                                       </div>
                                   </div>
                               </div>
@@ -882,7 +899,7 @@
                               <div class="col-md-12">
                                   <div class="form-group row">
                                       <div class="col-sm-12">
-                                          <input type="text" class="form-control" name="feat4">
+                                          <input type="text" class="form-control" name="feat5" placeholder="Always plan support">
                                       </div>
                                   </div>
                               </div>
@@ -891,34 +908,225 @@
                               <div class="col-md-12">
                                   <div class="form-group row">
                                       <div class="col-sm-12">
-                                          <input type="text" class="form-control" name="feat5">
+                                          <input type="text" class="form-control" name="feat6" placeholder="Visualization premise">
                                       </div>
                                   </div>
                               </div>
                           </div>
-                          <div class="row">
-                              <div class="col-md-12">
-                                  <div class="form-group row">
-                                      <div class="col-sm-12">
-                                          <input type="text" class="form-control" name="feat6">
-                                      </div>
-                                  </div>
-                              </div>
-                          </div>
-                          <div class="form-group row">
+                          <div class="card-footer">
+                            <div class="form-group row">
+                              <div class="col-6">
                               <label><b>Payment Link</b></label>
                           </div>
-                          <div class="col" style="align:center">
-
-                              <button type="submit" name="sub" class="btn btn-primary btn-rounded btn-icon"
-                                  title="Edit Blog">UPDATE</button>
-
+                          <div class="col-6">
+                            <button type="submit" name="sub" class="btn btn-primary btn-rounded btn-icon"  title="Edit Blog" style="margin-left:50%">UPDATE</button>
+                          </div>
+                        </div>
                           </div>
                       </form>
                   </div>
               </div>
           </div>
+          <div class="col-4 grid-margin">
+            <div class="card">
+              <div class="card-header">
+                <h4 class="card-title"><b>Medium</b></h4>
+  
+              </div>
+                <div class="card-body">
+                    <h4 class="card-title"></h4>
+                    <form class="form-sample" method="post">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group row">
+                                    <div class="col-sm-12">
+                                        <input type="hidden" class="form-control" name="id" >
+                                        
+                                        <input type="text" class="form-control" name="name" placeholder="General">
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group row">
+                                    <div class="col-sm-12">
+                                        <input type="text" class="form-control" name="price" placeholder="35.00">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group row">
+                                    <div class="col-sm-12">
+                                        <input type="text" class="form-control" name="feat1" placeholder="Construction Drawing">
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group row">
+                                    <div class="col-sm-12">
+                                        <input type="text" class="form-control" name="feat2" placeholder="Floor & celling plan">
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group row">
+                                    <div class="col-sm-12">
+                                        <input type="text" class="form-control" name="feat3" placeholder="Selection of Material">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group row">
+                                    <div class="col-sm-12">
+                                        <input type="text" class="form-control" name="feat4" placeholder="Structure of a project">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group row">
+                                    <div class="col-sm-12">
+                                        <input type="text" class="form-control" name="feat5" placeholder="Always plan support">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group row">
+                                    <div class="col-sm-12">
+                                        <input type="text" class="form-control" name="feat6" placeholder="Visualization premise">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                          <div class="form-group row">
+                            <div class="col-6">
+                            <label><b>Payment Link</b></label>
+                        </div>
+                        <div class="col-6">
+                          <button type="submit" name="sub" class="btn btn-primary btn-rounded btn-icon"  title="Edit Blog" style="margin-left:50%">UPDATE</button>
+                        </div>
+                      </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-4 grid-margin">
+          <div class="card">
+            <div class="card-header">
+              <h4 class="card-title"><b>Advance</b></h4>
 
+            </div>
+              <div class="card-body">
+                  <form class="form-sample" method="post">
+                      <div class="row">
+                          <div class="col-md-12">
+                              <div class="form-group row">
+                                  <div class="col-sm-12">
+                                      <input type="hidden" class="form-control" name="id" >
+                                      
+                                      <input type="text" class="form-control" name="name" placeholder="General">
+                                  </div>
+                              </div>
+                          </div>
+                          
+                      </div>
+                      <div class="row">
+                          <div class="col-md-12">
+                              <div class="form-group row">
+                                  <div class="col-sm-12">
+                                      <input type="text" class="form-control" name="price" placeholder="45.00">
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="row">
+                          <div class="col-md-12">
+                              <div class="form-group row">
+                                  <div class="col-sm-12">
+                                      <input type="text" class="form-control" name="feat1" placeholder="Construction Drawing">
+                                      
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="row">
+                          <div class="col-md-12">
+                              <div class="form-group row">
+                                  <div class="col-sm-12">
+                                      <input type="text" class="form-control" name="feat2" placeholder="Floor & celling plan">
+                                      
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="row">
+                          <div class="col-md-12">
+                              <div class="form-group row">
+                                  <div class="col-sm-12">
+                                      <input type="text" class="form-control" name="feat3" placeholder="Selection of Material">
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="row">
+                          <div class="col-md-12">
+                              <div class="form-group row">
+                                  <div class="col-sm-12">
+                                      <input type="text" class="form-control" name="feat4" placeholder="Structure of a project">
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="row">
+                          <div class="col-md-12">
+                              <div class="form-group row">
+                                  <div class="col-sm-12">
+                                      <input type="text" class="form-control" name="feat5" placeholder="Always plan support">
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="row">
+                          <div class="col-md-12">
+                              <div class="form-group row">
+                                  <div class="col-sm-12">
+                                      <input type="text" class="form-control" name="feat6" placeholder="Visualization premise">
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="card-footer">
+                        <div class="form-group row">
+                          <div class="col-6">
+                          <label><b>Payment Link</b></label>
+                      </div>
+                      <div class="col-6">
+                        <button type="submit" name="sub" class="btn btn-primary btn-rounded btn-icon"  title="Edit Blog" style="margin-left:50%">UPDATE</button>
+                      </div>
+                    </div>
+                      </div>
+                  </form>
+              </div>
+          </div>
+      </div>
+      
       </div>
           </div>
           <!--/.col (right) -->
@@ -929,12 +1137,8 @@
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
-  <footer class="main-footer">
-    <div class="float-right d-none d-sm-block">
-      <b>Version</b> 3.2.0
-    </div>
-    <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
-  </footer>
+ <?php include("assets\include\Footer.php"); ?>
+ 
 
   <!-- Control Sidebar -->
   <aside class="control-sidebar control-sidebar-dark">
