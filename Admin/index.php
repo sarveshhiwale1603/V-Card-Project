@@ -29,7 +29,7 @@
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
 
- <?php include("pages\include\header.php"); ?>
+         <?php include("pages\include\header.php"); ?>
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
