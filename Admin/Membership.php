@@ -34,6 +34,7 @@
 
     <!-- Preloader -->
     <?php include("pages\include\header.php"); ?>
+    <?php include("pages\include\sidebar.php"); ?>
 
     <!-- Navbar -->
 
@@ -59,10 +60,29 @@
             </div><!-- /.col -->
           </div><!-- /.row -->
         </div><!-- /.container-fluid -->
-      </div>
-      
+        <div class="container">
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title">Membership</h3>
+            </div>
+            <!-- /.card-header -->
+            <div class="card-body">
+              <table id="example1" class="table table-bordered table-striped">
+                <thead>
+                  <tr>
+                    <th>S.No</th>
+                    <th>Member Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                  </tr>
+                </thead>
+              </table>
+            </div>
+            </div>
+          </div>
         </div>
-         </div>
+      </div>
+    </div>
     <!-- /.container-fluid -->
    
     

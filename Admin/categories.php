@@ -35,7 +35,10 @@
   <!-- Select2 -->
   <link rel="stylesheet" href="plugins/select2/css/select2.min.css">
   <link rel="stylesheet" href="plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css">
-
+  <!-- Bootstrap 4 -->
+  <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- Select2 -->
+  <script src="plugins/select2/js/select2.full.min.js"></script>
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
@@ -43,6 +46,7 @@
 
     <!-- Preloader -->
     <?php include("pages\include\header.php"); ?>
+    <?php include("pages\include\sidebar.php"); ?>
     <!-- Navbar -->
    
     <!-- /.navbar -->
@@ -89,32 +93,23 @@
                   </div>
                 </div>
               </div>
+            </div>
+            <div class="card">
+              <!-- /.card-header -->
               <div class="card-body">
-                <div id="example1_wrapper" class="dataTables_wrapper dt-bootstrap4">
-                  <div class="row">
-                    <div class="col-sm-12">
-                      <table id="example1" class="table table-striped dataTable dtr-inline"
-                        aria-describedby="example1_info">
-                        <thead>
-                          <tr>
-                            <th>Categories</th>
-                            <th>Actions</th>
-                          </tr>
-                        </thead>
-                        <tbody>
+                <table id="example1" class="table table-bordered table-striped">
+                  <thead>
+                  <tr>
+                    <th>Categories</th>
+                    <th>Actions</th>
+                  </tr>
+                  </thead>
+                  <tbody>
 
-
-                        </tbody>
-                        <tfoot>
-
-                        </tfoot>
-                      </table>
-                    </div>
-                  </div>
-                </div>
-
+                  </tbody>
+                </table>
               </div>
-
+              <!-- /.card-body -->
             </div>
           </div><!-- /.container-fluid -->
         </div>
@@ -142,6 +137,14 @@
                     <option>Shopping</option>
                     <option>Art Gallary</option>         
                   </select>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-body">
+                <div class="col-lg-12">
+                  <div class="form_group">
+                    <label>Categories Name</label>
+                    <input type="text" class="form-control" placeholder="Enter Categories Name">
                   </div>
                 </div>
               </div>
@@ -235,7 +238,17 @@
         "autoWidth": false,
         "responsive": true,
       });
+      
     });
+    $(function () {
+        //Initialize Select2 Elements
+        $(".select2").select2();
+
+        //Initialize Select2 Elements
+        $(".select2bs4").select2({
+          theme: "bootstrap4",
+        });
+      });
   </script>
 </body>
 
