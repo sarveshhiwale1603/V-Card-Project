@@ -34,6 +34,7 @@
 
     <!-- Preloader -->
     <?php include("pages\include\header.php"); ?>
+    <?php include("pages\include\sidebar.php"); ?>
 
     <!-- Navbar -->
     

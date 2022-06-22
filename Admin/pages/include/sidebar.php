@@ -45,7 +45,7 @@
             <a href="listing.php" class="nav-link">
               <i class="nav-icon fas fa-clock"></i>
               <p>
-              Listning
+              Listing
               </p>
             </a>
           </li>
