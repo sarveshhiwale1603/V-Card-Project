@@ -426,6 +426,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .testimonial-author span {
     box-shadow: 0 2px 10px rgba(255,76,96,0.25);
+    background-color:  rgba(255,76,96,1);
 }
 .testimonial, .testimonial p {
     font-size: 18px;
@@ -433,4 +434,15 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 30px;
     color: gray;
     line-height: 32px;
+}
+a.headline-link {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    color:rgba(255,76,96,1);
+}
+.section-headline {
+    display: block;
+    position: relative;
+    padding-right: 20%;
 }
