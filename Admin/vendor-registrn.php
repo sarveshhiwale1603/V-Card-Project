@@ -81,10 +81,7 @@ if(!in_array($extension,$all_extension)){
     move_uploaded_file($dnk,$loc);
 }
 
-
-
-
-$sql=mysqli_query($conn,"INSERT INTO `vendore`(`placename`, `categories`, `keyword`, `name`, `email`, `phone`, `website`, `designation`, `company`, `facebook`, `twitter`, `linkedin`, `skype`, `img`, `imgi`, `imgii`, `vid`, `vidv`, `mon_am`, `mon_pm`, `tue_am`, `tue_pm`, `wed_am`, `wed_pm`, `thu_am`, `thu_pm`, `fri_am`, `fri_pm`, `sat_am`, `sat_pm`, `sun_am`, `sun_pm`) VALUES ('$placename','$categories','$keyword','$name','$email','$phone','$website','$designation','$company','$facebook','$twitter','$linkedin','$skype','$img','$imgi','$imgii','$vid','$vid','$mon_am','$mon_pm','$tue_am','$tue_pm','$wed_am','$wed_pm','$thu_am','$thu_pm','$fri_am','$fri_pm','$sat_am','$sat_pm','$sun_am','$sun_pm')");
+$sql=mysqli_query($conn,"INSERT INTO `vendor`(`placename`, `categories`, `keyword`, `name`, `email`, `phone`, `website`, `designation`, `company`, `facebook`, `twitter`, `linkedin`, `skype`, `img`, `imgi`, `imgii`, `vid`, `vidv`, `mon_am`, `mon_pm`, `tue_am`, `tue_pm`, `wed_am`, `wed_pm`, `thu_am`, `thu_pm`, `fri_am`, `fri_pm`, `sat_am`, `sat_pm`, `sun_am`, `sun_pm`) VALUES ('$placename','$categories','$keyword','$name','$email','$phone','$website','$designation','$company','$facebook','$twitter','$linkedin','$skype','$img','$imgi','$imgii','$vid','$vid','$mon_am','$mon_pm','$tue_am','$tue_pm','$wed_am','$wed_pm','$thu_am','$thu_pm','$fri_am','$fri_pm','$sat_am','$sat_pm','$sun_am','$sun_pm')");
 }
 ?>
 <!DOCTYPE html>
@@ -179,7 +176,6 @@ $sql=mysqli_query($conn,"INSERT INTO `vendore`(`placename`, `categories`, `keywo
                                                 <div class="input-group">
                                                     <select class="form-control select2" data-plcaeholer="select a state" id="cat" name="categories" style="width: 100%;">
                                                         <option selected="selected" value="Not Selected">Select Categories</option>
-                                                        <option value="Categories">Categories</option>
                                                         <option value="Restaurant">Restaurant</option>
                                                         <option value="Party Center">Party Center</option>
                                                         <option value="fitness Zone">fitness Zone</option>

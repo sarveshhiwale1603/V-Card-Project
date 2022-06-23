@@ -1,5 +1,5 @@
 <?php
-$conn=mysqli_connect("localhost","root","","vendore-registration");
+$conn=mysqli_connect("localhost","root","","vendor-registration");
 
 // Check connection
 if ($conn->connect_error) {

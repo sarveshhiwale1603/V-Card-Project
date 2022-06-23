@@ -1,5 +1,13 @@
 <?php
 include("config.php");
+
+if(isset($_GET['delid'])){
+  $id=mysqli_real_escape_string($conn,$_GET['delid']);
+  $dnk=mysqli_query($conn,"delete from vendor where id='$id'");
+  if($dnk=1){
+      header("location:listing.php");
+  }
+}
 ?>
 
 <!DOCTYPE html>
@@ -36,18 +44,12 @@ include("config.php");
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
-
   <!-- Preloader -->
   <?php include("pages\include\header.php"); ?>
   <?php include("pages\include\sidebar.php"); ?>
-
   <!-- Navbar -->
- 
   <!-- /.navbar -->
-
   <!-- Main Sidebar Container -->
- 
-
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -87,24 +89,30 @@ include("config.php");
                       <th>Category Name</th>
                       <th>Phone No.</th>
                       <th>Place Name</th>
+                      <th>Action</th>
                     </tr>
                   </thead>
                       <tbody>
                         <?php 
-                        
-                          $sql=mysqli_query($conn,"select * from vendore");
+                          $sql=mysqli_query($conn,"select * from vendor");
+                          $count=1;
                           while($arr=mysqli_fetch_array($sql)){
-                          ?>
-                          <tr>
-                            <td><?php echo $arr['id'];?></td>
-                            <td><img src="<?php echo $arr['img'];?>" height="100px" width="100px" alt=""></td>
-                            <td><?php echo $arr['name'];?></td>
-                            <td><?php echo $arr['company'];?></td>
-                            <td><?php echo $arr['categories'];?> </td>
-                            <td><?php echo $arr['phone'];?> </td>
-                            <td><?php echo $arr['placename'];?></td>                       
-                          </tr>
-                        <?php } ?>
+                        ?>
+                        <tr>
+                          <td><?php echo $count;?></td>
+                          <td><img src="img/<?php echo $arr['img'];?>" height="100px" width="100px" alt=""></td>
+                          <td><?php echo $arr['name'];?></td>
+                          <td><?php echo $arr['company'];?></td>
+                          <td><?php echo $arr['categories'];?> </td>
+                          <td><?php echo $arr['phone'];?> </td>
+                          <td><?php echo $arr['placename'];?></td>
+                          <td><a href="listing.php?delid=<?php echo $arr['id']; ?>">
+                              <button type="button" class="btn btn-danger btn-sm btn-icon"
+                                onclick="ConfirmDelete()" style="color: aliceblue">
+                                <i class="fas fa-trash"></i></button></a>
+                          </td>                         
+                        </tr>
+                        <?php $count++;} ?>
                       </tbody>
                 </table>
               </div>
@@ -118,7 +126,6 @@ include("config.php");
       </div>
       <!-- /.container-fluid -->
     </section>
-
   </div> <!-- /.content-wrapper -->
   <?php include("pages\include\Footer.php"); ?>
   <!-- Control Sidebar -->
@@ -172,8 +179,6 @@ include("config.php");
 <script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
 <!-- AdminLTE App -->
 <script src="dist/js/adminlte.js"></script>
-<!-- AdminLTE for demo purposes -->
-<script src="dist/js/demo.js"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="dist/js/pages/dashboard.js"></script>
 <script>
