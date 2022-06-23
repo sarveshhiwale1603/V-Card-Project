@@ -1,6 +1,21 @@
+<?php
+  include("config.php");
+  if(isset($_POST['submit'])){
+    $category_name=$_POST['category_name'];
+
+  $sql=mysqli_query($conn, "INSERT INTO `categories`(`category_name`) VALUES ('$category_name')");
+  }
+  if(isset($_GET['delid'])){
+    $id=mysqli_real_escape_string($conn,$_GET['delid']);
+    $dnk=mysqli_query($conn,"delete from categories where id='$id'");
+    if($dnk=1){
+        header("location:categories.php");
+    }
+  }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -43,18 +58,12 @@
 
 <body class="hold-transition sidebar-mini layout-fixed">
   <div class="wrapper">
-
     <!-- Preloader -->
     <?php include("pages\include\header.php"); ?>
     <?php include("pages\include\sidebar.php"); ?>
     <!-- Navbar -->
-   
     <!-- /.navbar -->
-
     <!-- Main Sidebar Container -->
-   
-
-
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
       <!-- Content Header (Page header) -->
@@ -74,88 +83,84 @@
         </div><!-- /.container-fluid -->
       </div>
       <!-- /.content-header -->
-
       <!-- Main content -->
       <section class="content">
-       
-          <div class="container">
-            <div class="card">
-              <div class="card-header" style="height:50px;">
-                <div class="card-title">
-                  <h4>Add Categories</h4>
-                </div>
-                <div class="card-tools">
-                  <div class="row mb-4">
-                    <div class="col text-center">
-                      <a href="#" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#basicModal"><i
-                          class="fa fa-plus"></i> Add New</a>
-                    </div>
+        <div class="container"><!-- /.container-fluid -->
+          <div class="card">
+            <div class="card-header" style="height:50px;">
+              <div class="card-title">
+                <h4>Add Categories</h4>
+              </div>
+              <div class="card-tools">
+                <div class="row mb-4">
+                  <div class="col text-center">
+                    <a href="#" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#basicModal"><i
+                      class="fa fa-plus"></i> Add New
+                    </a>
                   </div>
                 </div>
-              </div>
-            </div>
-            <div class="card">
-              <!-- /.card-header -->
-              <div class="card-body">
-                <table id="example1" class="table table-bordered table-striped">
-                  <thead>
-                  <tr>
-                    <th>Categories</th>
-                    <th>Actions</th>
-                  </tr>
-                  </thead>
-                  <tbody>
-
-                  </tbody>
-                </table>
-              </div>
-              <!-- /.card-body -->
-            </div>
-          </div><!-- /.container-fluid -->
-        </div>
-        <div class="modal fade" id="basicModal" tabindex="-1" role="dialog" aria-labelledby="basicModal"
-          aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h4 class="modal-title" id="myModalLabel">Categories</h4>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body">
-                <div class="col-lg-12">
-                  <div class="form_group">
-                    <label>Select Categories</label>
-                  <select class="form-control select2bs4" style="width: 100%;">
-                    <option selected="selected">Museums</option>
-                    <option>Restaurant</option>
-                    <option>Party Center</option>
-                    <option>Fitness Zone</option>
-                    <option>Game Field</option>
-                    <option>Job & Feeds</option>
-                    <option>Shopping</option>
-                    <option>Art Gallary</option>         
-                  </select>
-                  </div>
-                </div>
-              </div>
-              <div class="modal-body">
-                <div class="col-lg-12">
-                  <div class="form_group">
-                    <label>Categories Name</label>
-                    <input type="text" class="form-control" placeholder="Enter Categories Name">
-                  </div>
-                </div>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Select</button>
               </div>
             </div>
           </div>
-        </div>
-
+          <div class="card"><!-- /.card-header -->  
+            <div class="card-body">
+              <table id="example1" class="table table-bordered table-striped ">
+                <thead>
+                  <tr>
+                    <th>Sr.No</th>
+                    <th>Categories</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                        <?php 
+                          $sql=mysqli_query($conn,"select * from categories");
+                          $count=1;
+                          while($arr=mysqli_fetch_array($sql)){
+                        ?>
+                          <tr>
+                            <td><?php echo $count;?></td>
+                            <td><?php echo $arr['category_name'];?></td>  
+                            <td><a href="categories.php?delid=<?php echo $arr['id']; ?>">
+                              <button type="button" class="btn btn-danger btn-sm btn-icon"
+                                onclick="ConfirmDelete()" style="color: aliceblue">
+                                <i class="fas fa-trash"></i></button></a>
+                            </td>                    
+                          </tr>
+                        <?php $count++;} ?>
+                      </tbody>
+              </table>
+            </div>
+              <!-- /.card-body -->
+          </div><!-- /.card-header -->  
+        </div><!-- /.container-fluid -->
+        <form method="post">
+          <!--modal-->
+          <div class="modal fade" id="basicModal" tabindex="-1" role="dialog" aria-labelledby="basicModal"aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title" id="myModalLabel">Categories</h4>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div class="col-lg-12">
+                    <div class="form_group">
+                      <label>Category Name</label>
+                      <input type="text" class="form-control" name="category_name" placeholder="Enter Category Name">
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  <button type="submit"name="submit" class="btn btn-outline-primary">Submit</button>
+                </div>
+              </div>
+            </div>
+          </div><!--modal-->
+        </form>
       </section>
       <!-- /.content -->
     </div>
@@ -163,9 +168,6 @@
     
 
     <!-- Control Sidebar -->
-    <aside class="control-sidebar control-sidebar-dark">
-      <!-- Control sidebar content goes here -->
-    </aside>
     <!-- /.control-sidebar -->
     <?php include("pages\include\Footer.php"); ?>
   </div>
@@ -201,8 +203,6 @@
   <script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
   <!-- AdminLTE App -->
   <script src="dist/js/adminlte.js"></script>
-  <!-- AdminLTE for demo purposes -->
-  <script src="dist/js/demo.js"></script>
   <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
   <script src="dist/js/pages/dashboard.js"></script>
   <!-- Bootstrap 4 -->
@@ -251,5 +251,4 @@
       });
   </script>
 </body>
-
 </html>
