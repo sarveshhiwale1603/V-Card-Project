@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>T| Dashboard</title>
+
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- Tempusdominus Bootstrap 4 -->
+  <link rel="stylesheet" href="plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+  <!-- iCheck -->
+  <link rel="stylesheet" href="plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+  <!-- JQVMap -->
+  <link rel="stylesheet" href="plugins/jqvmap/jqvmap.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="dist/css/adminlte.min.css">
+  <!-- overlayScrollbars -->
+  <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+  <!-- Daterange picker -->
+  <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css">
+  <!-- summernote -->
+  <link rel="stylesheet" href="plugins/summernote/summernote-bs4.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../assets/V-card Templates/Template Css/black.css">
+</head>
+
+<body class="hold-transition sidebar-mini layout-fixed">
+  <div class="wrapper">
+
+    <!-- Preloader -->
+    <?php include("pages\include\header.php"); ?>
+    <?php include("pages\include\sidebar.php"); ?>
+
+    <!-- Navbar -->
+
+    <!-- /.navbar -->
+
+    <!-- Main Sidebar Container -->
+
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+      <!-- Content Header (Page header) -->
+      <div class="content-header">
+        <div class="container-fluid">
+          <div class="row mb-2">
+            <div class="col-sm-6">
+              <h1 class="m-0">V Card</h1>
+            </div><!-- /.col -->
+            <div class="col-sm-6">
+              <ol class="breadcrumb float-sm-right">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item active">V Card</li>
+              </ol>
+            </div><!-- /.col -->
+          </div><!-- /.row -->
+        </div><!-- /.container-fluid -->
+      </div>
+
+      <section class="content">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-7">
+              <div class="card">
+                <div class="card-header">
+                  <h5 class="card-title">Your V-Card</h5>
+                  <!-- <div class="card-tools">
+                  <a href="employees-Grid.html"> <button type="button" title="Grid view" class="btn btn-primary btn-sm">
+                      <i class="fas fa-th-large"></i></button></a> 
+                    <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="collapse"
+                      href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                      <i class="fas fa-plus"></i> Add New</button>
+                  </div> -->
+                </div>
+
+                <!-- /.card-header -->
+                <div class="card-body">
+                  <div class="row my-3">
+                    <div class="col-10">
+                      <label>Banner<sup><b style="color:red;">*</b></sup></label>
+                      <div class="custom-file">
+                        <input type="file" class="custom-file-input" name="file" accept="image/png, image/gif, image/jpeg, image/jpg">
+                        <label class="custom-file-label">Choose file...</label>
+                        <small class="text-muted">Upload files only: gif,png,jpg,jpeg</small>
+                      </div>
+                    </div>
+                    <div class="col-2">
+                      <img src="img/download.jpg" style="width:100%;" alt="">
+                    </div>
+                  </div>
+                  <div class="row my-3">
+                    <div class="col-10">
+                      <label>Logo<sup><b style="color:red;">*</b></sup></label>
+                      <div class="custom-file">
+                        <input type="file" class="custom-file-input" name="file" accept="image/png, image/gif, image/jpeg, image/jpg">
+                        <label class="custom-file-label">Choose file...</label>
+                        <small class="text-muted">Upload files only: gif,png,jpg,jpeg</small>
+                      </div>
+                    </div>
+                    <div class="col-2">
+                      <img src="img/download.jpg" style="width:100%;" alt="">
+                    </div>
+                  </div>
+                  <div class="row my-3">
+                    <div class="col-12">
+                      <label>Slug<sup><b style="color:red;">*</b></sup></label>
+                      <input type="text" size="60"  maxlength="60" class="form-control" id="content" placeholder="Enter content" />
+                      <small class="text-muted">Use only alphanumeric value without space. (Hyphen(-) allow). Slug will be used for card url.</small>
+                    </div>
+                    <div class="col-4">
+                      <button type="button" class=
+                      "btn btn-default" id="generate">
+                      Generate
+                    </button>
+                    </div>
+                  </div>
+                  <div class="row my-3">
+                    <div class="col-12">
+                      <label>Title<sup><b style="color:red;">*</b></sup></label>
+                      <input type="text" class="form-control" name="Pancard" placeholder="Pan No" required>
+                    </div>
+                  </div>
+                  <div class="row my-3">
+                    <div class="col-12">
+                      <label>Sub Title<sup><b style="color:red;">*</b></sup></label>
+                      <input type="text" class="form-control" name="Pancard" placeholder="Pan No" required>
+                    </div>
+                  </div>
+                  <div class="row my-3">
+                    <div class="col-12">
+                      <label>Description<sup><b style="color:red;">*</b></sup></label>
+                      <textarea class="form-control" placeholder="Description" id="floatingTextarea2" style="height: 100px"></textarea>
+                    </div>
+                  </div>
+                  <!-- /.card-body -->
+                </div>
+
+                
+                <div class="card-footer">
+                  <button type="submit" id="submit" class="btn btn-lg btn-primary" name="Save">Save</button>
+                </div>
+                <!-- /.card -->
+              </div>
+            </div>
+            <div class="col-md-5">
+              <div class="row">
+                <div class="col-12">
+                  <div class="card">
+                    <div class="card-header">
+                      <h5 class="card-title">Your QR-Code</h5>
+                    </div>
+                    <div class="card-body">
+                      <div class="text-center">
+                        <img src="img/download.jpg" class="qr-code img-thumbnail img-responsive" />
+                      </div>
+                    </div>
+                    <!-- /.card -->
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="card">
+                    <div class="card-header">
+                      <h5 class="card-title">Select Design</h5>
+                    </div>
+                    <!-- /.card-header -->
+                    <div class="card-body ltr">
+                        <div class="wrapper">
+                        <div class="vCard">
+                            <div class="vCard-header">
+                                <div class="bg-white rounded overflow-hidden">
+                                    <div class="p-4 cover" style="background-image:url(https://quickvcard.codentheme.com/storage/cards/cover/16288405676116227795e47.jpg)">
+                                        <div class="media align-items-end profile-head">
+                                            <div class="profile mr-3">
+                                                <img src="https://quickvcard.codentheme.com/storage/cards/logo/16288405676116227791abf.jpg" alt="Angelina" class="rounded mb-4 img-thumbnail">
+                                            </div>
+                                            <div class="media-body mb-5 text-white">
+                                                <h4 class="mt-0 mb-0 text-white">Angelina</h4>
+                                                <p class="small mb-4 text-white font-italic">Fashion Desinger</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="bg-light p-4 pt-5 vcard-description">
+                                        <p>newsletters, or a billboard.Easily share your digital business card with anyone using a QR c<br>
+                    <br>
+                    ode or send it through email, a link, and more. you can download QR code and print on anything like flyers, newsletters, or a billboard.</p>
+                    
+                                    </div>
+                                </div>
+                            </div>
+                                    <div class="vCard-contact">
+                                <ul class="vCard-list">
+                                <li class="vcard-type-phone"><a href="tel:123456789" class="media vCard-list-item"><span class="mr-3 ripple"><i class="fa fa-phone"></i></span><div class="align-self-center media-body"><h6 class="mt-0 mb-0">123456789</h6><span class="label">Mobile</span></div></a></li><li class="vcard-type-whatsapp"><a href="https://api.whatsapp.com/send?phone=17878837689" class="media vCard-list-item"><span class="mr-3 ripple"><i class="fa fa-whatsapp"></i></span><div class="align-self-center media-body"><h6 class="mt-0 mb-0">17878837689</h6><span class="label">WhatsApp</span></div></a></li><li class="vcard-type-text"><a href="javascript:void(0)" class="media vCard-list-item"><span class="mr-3 ripple"><i class="fa fa-align-left"></i></span><div class="align-self-center media-body"><h6 class="mt-0 mb-0">Lorem Impsu dolor amet of tuta.Lorem Impsu dolor amet of tuta.Lorem Impsu dolor amet of tuta.</h6></div></a></li><li class="vcard-type-website"><a href="https://google.com" class="media vCard-list-item"><span class="mr-3 ripple"><i class="fa fa-link"></i></span><div class="align-self-center media-body"><h6 class="mt-0 mb-0">https://google.com</h6><span class="label">Visit Here</span></div></a></li></ul>
+                            </div>
+                                </div>
+                            <!-- <div class="add-to-contact-wrapper">
+                            <button class="btn btn-primary add-to-contact-btn"><i class="fa fa-address-card"></i>&nbsp; Add to Contact</button>
+                        </div> -->
+                    </div>
+                      <!-- /.card-body -->
+                    </div>
+                    <!-- /.card -->
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          
+        </div>
+      </section>
+      <!-- /.content-header -->
+    </div><!-- /.container-fluid -->
+
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+  <?php include("pages\include\Footer.php"); ?>
+
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+  </aside>
+  <!-- /.control-sidebar -->
+
+  <!-- ./wrapper -->
+
+  <!-- jQuery -->
+  <script src="plugins/jquery/jquery.min.js"></script>
+  <!-- jQuery UI 1.11.4 -->
+  <script src="plugins/jquery-ui/jquery-ui.min.js"></script>
+  <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+  <script>
+    $.widget.bridge('uibutton', $.ui.button)
+  </script>
+  <!-- Bootstrap 4 -->
+  <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- ChartJS -->
+  <script src="plugins/chart.js/Chart.min.js"></script>
+  <!-- Sparkline -->
+  <script src="plugins/sparklines/sparkline.js"></script>
+  <!-- JQVMap -->
+  <script src="plugins/jqvmap/jquery.vmap.min.js"></script>
+  <script src="plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+  <!-- jQuery Knob Chart -->
+  <script src="plugins/jquery-knob/jquery.knob.min.js"></script>
+  <!-- daterangepicker -->
+  <script src="plugins/moment/moment.min.js"></script>
+  <script src="plugins/daterangepicker/daterangepicker.js"></script>
+  <!-- Tempusdominus Bootstrap 4 -->
+  <script src="plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+  <!-- Summernote -->
+  <script src="plugins/summernote/summernote-bs4.min.js"></script>
+  <!-- overlayScrollbars -->
+  <script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+  <!-- AdminLTE App -->
+  <script src="dist/js/adminlte.js"></script>
+  <!-- AdminLTE for demo purposes -->
+  <script src="dist/js/demo.js"></script>
+  <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+  <script src="dist/js/pages/dashboard.js"></script>
+  <script src=
+  "https://code.jquery.com/jquery-3.5.1.js">
+</script>
+
+<script>
+  // Function to HTML encode the text
+  // This creates a new hidden element,
+  // inserts the given text into it 
+  // and outputs it out as HTML
+  function htmlEncode(value) {
+    return $('<div/>').text(value)
+      .html();
+  }
+
+  $(function () {
+
+    // Specify an onclick function
+    // for the generate button
+    $('#generate').click(function () {
+
+      // Generate the link that would be
+      // used to generate the QR Code
+      // with the given data 
+      let finalURL =
+'https://chart.googleapis.com/chart?cht=qr&chl=' +
+        htmlEncode($('#content').val()) +
+        '&chs=160x160&chld=L|0'
+
+      // Replace the src of the image with
+      // the QR code image
+      $('.qr-code').attr('src', finalURL);
+    });
+  });
+</script>
+</body>
+
+</html>

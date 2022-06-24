@@ -366,12 +366,12 @@ hr {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
-
+/* 
 html {
     overflow: hidden;
     overflow-y: auto;
-}
-
+} */
+/* 
 body {
     overflow: hidden;
     font-size: 16px;
@@ -381,7 +381,7 @@ body {
     font-family: "DM Sans", sans-serif;
     color: #757589;
     font-weight: 400;
-}
+} */
 
 h1,
 h2,
@@ -639,12 +639,12 @@ textarea:active {
     right: 0;
     top: 30%;
 }
-
+/* 
 body {
     background-color: #eee;
     background: linear-gradient(to right,  var(--theme-color-1),  var(--theme-color-0_5));
     min-height: 100vh
-}
+} */
 
 .wrapper {
     display: flex;
@@ -763,11 +763,11 @@ body {
     }
 }
 
-.btn-primary, .btn-primary:hover, .btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show > .btn-primary.dropdown-toggle {
+/* .btn-primary, .btn-primary:hover, .btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show > .btn-primary.dropdown-toggle {
     background-color: var(--theme-color-1);
     border-color: var(--theme-color-1);
     transition: 0.3s filter;
-}
+} */
 
 .btn-primary.focus, .btn-primary:focus,.btn-primary:not(:disabled):not(.disabled).active:focus, .btn-primary:not(:disabled):not(.disabled):active:focus, .show>.btn-primary.dropdown-toggle:focus {
     box-shadow: 0 0 0 0.2rem var(--theme-color-0_5);

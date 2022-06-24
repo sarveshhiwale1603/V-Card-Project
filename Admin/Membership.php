@@ -64,7 +64,9 @@
             </div><!-- /.col -->
           </div><!-- /.row -->
         </div><!-- /.container-fluid -->
-        <div class="container">
+       
+      </div>
+      <div class="container">
           <div class="card">
             <div class="card-header">
               <h3 class="card-title">Membership</h3>
@@ -85,19 +87,18 @@
             </div>
           </div>
         </div>
-      </div>
     </div>
     <!-- /.container-fluid -->
    
     
     <?php include("pages\include\Footer.php"); ?>
-
+ </div>
   <!-- Control Sidebar -->
   <aside class="control-sidebar control-sidebar-dark">
     <!-- Control sidebar content goes here -->
   </aside>
   <!-- /.control-sidebar -->
-  
+
   <!-- ./wrapper -->
 
   <!-- jQuery -->
